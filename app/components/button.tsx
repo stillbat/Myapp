@@ -3,10 +3,12 @@ export const Button = ({ text, type }) => {
     return (
       <button
         style={{
+          cursor: "pointer",
           backgroundColor: "transparent",
+          border: "1px solid white",
           fontSize: "16px",
-          opacity: "52%",
-          width: "84px",
+          color: "white",
+          boxSizing: "border-box", width: "128px", height: "56px",
         }}
       >
         Get access
@@ -20,7 +22,6 @@ export const Button = ({ text, type }) => {
         backgroundColor: "#0BBEF2",
         padding: "16px",
         color: "white",
-        top: "522px",
       }}
     >
       Get early access
