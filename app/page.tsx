@@ -1,84 +1,24 @@
-import { Button } from "./components/Button";
-import BackgroundImage from "../public/brooke.png";
-import { NavigationItem } from "./components/navigation-item";
-
-import Image from "next/image"
-import { NavigationBar } from "./components/NavigationBar";
-
-
-
-const Texts2 = () => {
-  return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <p
-        style={{
-          fontSize: "48px",
-          width: "514px",
-          height: "120px",
-          top: "252px",
-        }}
-      >
-        Instant collaborations for remote teams
-      </p>
-      <p
-        style={{
-          fontSize: "18px",
-          width: "323.85px",
-          top: "394px",
-          height: "58px",
-          left: "124px",
-        }}
-      >
-        All in one for your remote team chats, collaboration and track projects
-      </p>
-    </div>
-  );
-};
-
-const Input = () => {
-  return (
-    <input
-      placeholder="Email me"
-      style={{
-        color: "grey",
-        padding: "16px",
-        width: "316.92px",
-        border: "1px",
-      }}
-    ></input>
-  );
-};
+import Image from "next/image";
+import { FirstSection } from "./first-page/first-section";
 
 export default function Home() {
   return (
     <div>
-      <div
-        style={{
-          height: "100vh",
-          color: "white",
-          backgroundImage: `url(${BackgroundImage.src})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          display: "flex", paddingLeft: "124px", flexDirection: "column", paddingRight: "124px", paddingTop: "20px"
-        }}
-      >
-        <NavigationBar />
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", height: "100%" }}>
-          <Texts2 />
-          <div style={{ display: "flex", gap: "20px" }}>
-            <Input />
-            <Button />
-          </div>
-        </div>
-      </div>
-
+      <FirstSection />
       <div
         style={{
           backgroundColor: "#F5F7FA",
           margin: "0px",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", paddingLeft: "140px", gap: "250px" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "140px",
+            gap: "250px",
+          }}
+        >
           <div>
             <h1 style={{ fontSize: "48px", width: "398px", height: "120px" }}>
               Your Hub for teamwork
