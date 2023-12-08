@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export const Box = ({ }) => {
+export const Blogitem = ({title, description, firstimage, avatarimage, name, date }) => {
     return (
         <div style={{ display: "flex", gap: "50px" }}>
             <div
@@ -12,7 +12,7 @@ export const Box = ({ }) => {
                     overflow: "hidden",
                     gap: "50px"
                 }}>
-                <Image src="/r1.png" width={370} height={147} alt="" />
+                <Image src={firstimage} width={370} height={147} alt="" />
                 <div
                     style={{
                         paddingLeft: "24px",
@@ -21,11 +21,11 @@ export const Box = ({ }) => {
                     }}
                 >
                     <p style={{ fontSize: "24px", width: "330px", height: "58px" }}>
-                        The Emotional Toll of Being in UX
+                        {title}
                     </p>
 
                     <p style={{ paddingTop: "25px", paddingBottom: "57px" }}>
-                        There are times when our work impacts us deeply — sometimes in ways we neither acknowledge nor understand
+                        {description}
                     </p>
                     <div
                         style={{
@@ -33,10 +33,10 @@ export const Box = ({ }) => {
                             gap: "10px",
                             alignItems: "center",
                         }} >
-                        <Image src="/a1.png" width={45} height={45} alt="" />
-                        <p>Wade Warren</p>
+                        <Image src={avatarimage} width={45} height={45} alt="" />
+                        <p>{name}</p>
                         <p>|</p>
-                        <p>2nd January,2022</p>
+                        <p>{date}</p>
                     </div>
                 </div>
             </div>

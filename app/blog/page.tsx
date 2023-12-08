@@ -1,8 +1,21 @@
-import Image from "next/image";
+"use client"
 import { NavigationBar } from "../components/navigation-bar";
-import { Box } from "./box";
+import { app } from "../firebase";
+import { Blogitem } from "./blog-item";
+
+import { collection, getFirestore } from 'firebase/firestore';
+import { useCollection } from 'react-firebase-hooks/firestore';
+
+
+
 
 export default function Home() {
+    const [value, loading, error] = useCollection(
+        collection(getFirestore(app), 'blog'),
+        {
+            snapshotListenOptions: { includeMetadataChanges: true },
+        }
+    );
     return (
         <div style={{ backgroundColor: "lightgrey" }}>
             <NavigationBar />
@@ -32,7 +45,38 @@ export default function Home() {
                     Our latest updates and blogs about managing your team
                 </p>
             </div>
-            <Box />
+            <div  style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+                <main
+                    style={{
+                        height: "100vh",
+                        width: "100vw",
+                        display: "flex",
+                        backgroundColor: "#d3d3d3",
+                        flexWrap: "wrap",
+                        gap: "10px",
+                    }}
+                >
+                    {value && (
+                        <span>
+                            Collection:{' '}
+                            {value.docs.map((doc) => (
+                                <div style={{display: "flex"}} 
+                                key={doc.id}>
+                                    <Blogitem
+                                        title={doc.data().title}
+                                        description={doc.data().description}
+                                        firstimage={doc.data().firstimage}
+                                        avatarimage={doc.data().avatarimage}
+                                        name={doc.data().name}
+                                        date={doc.data().date}
+                                    />
+
+                                </div>
+                            ))}
+                        </span>
+                    )}
+                </main>
+            </div>
         </div>
     );
 }
