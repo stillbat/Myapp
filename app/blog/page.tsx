@@ -45,38 +45,36 @@ export default function Home() {
                     Our latest updates and blogs about managing your team
                 </p>
             </div>
-            <div  style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
                 <main
                     style={{
                         height: "100vh",
                         width: "100vw",
                         display: "flex",
-                        backgroundColor: "#d3d3d3",
                         flexWrap: "wrap",
-                        gap: "10px",
+                        backgroundColor: "#d3d3d3",
+                        gap: "20px",
+                        
                     }}
                 >
-                    {value && (
-                        <span>
-                            Collection:{' '}
-                            {value.docs.map((doc) => (
-                                <div style={{display: "flex"}} 
+                    {value &&
+                        value.docs.map((doc) => (
+                            <div style={{ display: "flex" }}
                                 key={doc.id}>
-                                    <Blogitem
-                                        title={doc.data().title}
-                                        description={doc.data().description}
-                                        firstimage={doc.data().firstimage}
-                                        avatarimage={doc.data().avatarimage}
-                                        name={doc.data().name}
-                                        date={doc.data().date}
-                                    />
+                                <Blogitem
+                                    title={doc.data().title}
+                                    description={doc.data().description}
+                                    firstimage={doc.data().firstimage}
+                                    avatarimage={doc.data().avatarimage}
+                                    name={doc.data().name}
+                                    date={doc.data().date}
+                                />
 
-                                </div>
-                            ))}
-                        </span>
-                    )}
+                            </div>
+                        ))
+                    }
                 </main>
             </div>
-        </div>
+        </div >
     );
 }

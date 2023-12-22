@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 export const Blogitem = ({title, description, firstimage, avatarimage, name, date }) => {
+    
     return (
         <div style={{ display: "flex", gap: "50px" }}>
             <div

@@ -6,7 +6,6 @@ export const SecondSection = () => {
       style={{
         backgroundColor: "#F5F7FA",
         margin: "0px",
-        
       }}
     >
       <div
@@ -15,9 +14,10 @@ export const SecondSection = () => {
           alignItems: "center",
           paddingLeft: "140px",
           paddingRight: "0px",
+          paddingTop: "190px"
         }}
       >
-        <div>
+        <div style={{ backgroundColor: "#F5F7fa" }}>
           <h1 style={{ fontSize: "48px", width: "398px", height: "120px" }}>
             Your Hub for teamwork
           </h1>
@@ -51,11 +51,8 @@ export const SecondSection = () => {
               />
             </svg>
           </a>
-        </div>
+        </div >
         <Image style={{ position: "absolute", right: "0px" }}
-
-
-
           src="/ootoMeetings1.png" height={705} width={579} alt="" />
       </div>
     </div>

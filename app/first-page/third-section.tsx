@@ -6,6 +6,8 @@ export const ThirdSection = () => {
         style={{
             backgroundColor: "#F5F7FA",
             margin: "0px",
+            display: "flex",
+            paddingTop: "190px"
         }}
         >
             <div
