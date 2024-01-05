@@ -42,7 +42,7 @@ export const FourthSection = () => {
                 display: "flex",
                 alignItems: "center",
               }}
-              href="/"
+              href="/blog"
             >
               Learn more{" "}
               <svg

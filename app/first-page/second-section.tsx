@@ -37,7 +37,7 @@ export const SecondSection = () => {
                 display: "flex",
                 alignItems: "center",
               }}
-              href="/"
+              href="/blog"
             >
               Learn more{" "}
               <svg
