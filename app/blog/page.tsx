@@ -4,6 +4,7 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import { NavigationBar } from "../components/navigation-bar";
 import { app } from "../firebase";
 import { Blogitem } from "./blog-item";
+import { Footer } from "../first-page/footer";
 
 export default function Home() {
   const [value, loading, error] = useCollection(
@@ -66,6 +67,7 @@ export default function Home() {
             ))}
         </main>
       </div>
+      <Footer/>
     </div>
   );
 }
