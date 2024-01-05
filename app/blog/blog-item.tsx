@@ -16,44 +16,42 @@ export const Blogitem = ({
   date: string;
 }) => {
   return (
-    <div style={{ display: "flex", gap: "50px" }}>
+    <div
+      style={{
+        height: "440px",
+        width: "363px",
+        backgroundColor: "white",
+        borderRadius: "30px",
+        overflow: "hidden",
+        gap: "50px",
+      }}
+    >
+      <Image src={firstimage} width={370} height={147} alt="" />
       <div
         style={{
-          height: "440px",
-          width: "363px",
-          backgroundColor: "white",
-          borderRadius: "30px",
-          overflow: "hidden",
-          gap: "50px",
+          paddingLeft: "24px",
+          paddingBottom: "19px",
+          paddingTop: "10px",
         }}
       >
-        <Image src={firstimage} width={370} height={147} alt="" />
+        <p style={{ fontSize: "24px", width: "330px", height: "58px" }}>
+          {title}
+        </p>
+
+        <p style={{ paddingTop: "25px", paddingBottom: "57px" }}>
+          {description}
+        </p>
         <div
           style={{
-            paddingLeft: "24px",
-            paddingBottom: "19px",
-            paddingTop: "10px",
+            display: "flex",
+            gap: "10px",
+            alignItems: "center",
           }}
         >
-          <p style={{ fontSize: "24px", width: "330px", height: "58px" }}>
-            {title}
-          </p>
-
-          <p style={{ paddingTop: "25px", paddingBottom: "57px" }}>
-            {description}
-          </p>
-          <div
-            style={{
-              display: "flex",
-              gap: "10px",
-              alignItems: "center",
-            }}
-          >
-            <Image src={avatarimage} width={45} height={45} alt="" />
-            <p>{name}</p>
-            <p>|</p>
-            <p>{date}</p>
-          </div>
+          <Image src={avatarimage} width={45} height={45} alt="" />
+          <p>{name}</p>
+          <p>|</p>
+          <p>{date}</p>
         </div>
       </div>
     </div>

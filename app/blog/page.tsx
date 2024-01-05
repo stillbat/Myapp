@@ -44,7 +44,7 @@ export default function Home() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <main
           style={{
-            height: "100vh",
+            minHeight: "100vh",
             width: "100vw",
             display: "flex",
             flexWrap: "wrap",
@@ -54,7 +54,16 @@ export default function Home() {
         >
           {value &&
             value.docs.map((doc) => (
-              <div style={{ display: "flex" }} key={doc.id}>
+              <a
+                href={`/blog/${doc.id}`}
+                style={{
+                  display: "flex",
+                  textDecoration: "none",
+                  color: "black",
+                  height: "440px",
+                }}
+                key={doc.id}
+              >
                 <Blogitem
                   title={doc.data().title}
                   description={doc.data().description}
@@ -63,7 +72,7 @@ export default function Home() {
                   name={doc.data().name}
                   date={doc.data().date}
                 />
-              </div>
+              </a>
             ))}
         </main>
       </div>
