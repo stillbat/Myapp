@@ -1,4 +1,4 @@
-export const Button = ({ text, type }) => {
+export const Button = ({ type }: { type?: "first" }) => {
   if (type == "first") {
     return (
       <button
@@ -8,7 +8,9 @@ export const Button = ({ text, type }) => {
           border: "1px solid white",
           fontSize: "16px",
           color: "white",
-          boxSizing: "border-box", width: "128px", height: "56px",
+          boxSizing: "border-box",
+          width: "128px",
+          height: "56px",
         }}
       >
         Get access

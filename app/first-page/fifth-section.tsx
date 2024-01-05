@@ -1,69 +1,235 @@
 import Image from "next/image";
 import { StarRating } from "./star";
-
-
+import { Container } from "../components/container";
 
 export const FifthSection = () => {
-    return (
-        <div
-            style={{
-                backgroundColor: "#F5F7FA",
-                margin: "0px",
-                display: "flex",
-                paddingTop: "190px"
-            }}
+  return (
+    <div
+      style={{
+        backgroundColor: "#F5F7FA",
+        paddingTop: "170px",
+        paddingBottom: "150px",
+      }}
+    >
+      <Container>
+        <h1
+          style={{
+            fontSize: "48px",
+            height: "60px",
+            display: "flex",
+            justifyContent: "center",
+          }}
         >
+          What people say about us
+        </h1>
+      </Container>
+      <div
+        style={{
+          paddingTop: "120px",
+          margin: "0px",
+          display: "flex",
+          overflow: "scroll",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            paddingLeft: "140px",
+            paddingRight: "140px",
+          }}
+        >
+          <div>
             <div
+              style={{
+                display: "flex",
+                gap: "30px",
+                paddingTop: "60px",
+                paddingBottom: "100px",
+              }}
+            >
+              <div
                 style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  backgroundColor: "white",
+                  padding: "40px",
+                  filter: "drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.25))",
+                  width: "286px",
+                  height: "294px",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "20px",
+                  }}
+                >
+                  <StarRating count={4} />
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      width: "291px",
+                      height: "154px",
+                    }}
+                  >
+                    Give everyone you work with—inside and outside your emoji,
+                    keep conversations focused in channels, and simplify all
+                    your communication into one place.
+                  </p>
+                </div>
+
+                <div
+                  style={{
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
-                    flexDirection: "column",
-                    paddingLeft: "140px"
-                }}
-            >
-                <div>
-                    <h1 style={{ fontSize: "48px", width: "615px", height: "60px", paddingLeft: "550px", }}>
-                        What people say about us
-                    </h1>
-                    <div style={{ display: "flex", gap: "30px", paddingTop: "190px" }}>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "20px", backgroundColor: "white", padding: "20px 20px 20px 20px", filter: "drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.25))", width: "366px", height: "374px" }}>
-                            <StarRating />
-                            <p style={{ fontSize: "18px", width: "291px", height: "154px" }}>Give everyone you work with—inside and outside your emoji, keep conversations focused in channels, and simplify all your communication into one place.</p>
-                            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                <Image src="/Ellipse.jpg" height={56} width={56} alt="" />
-                                <p>Amy Klassen</p>
-                            </div>
-                        </div>
-                        <div style={{ display: "flex", flexDirection: "column", padding: "20px 20px 20px 20px", gap: "20px", backgroundColor: "white", filter: "drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.25))", width: "366px", height: "374px" }}>
-                            <StarRating />
-                            <p style={{ fontSize: "18px", width: "291px", height: "154px" }}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                <Image src="/Ellipse2.jpg" height={56} width={56} alt="" />
-                                <p>Jane Cooper</p>
-                            </div>
-                        </div>
-                        <div style={{ display: "flex", flexDirection: "column", padding: "20px 20px 20px 20px", gap: "20px", backgroundColor: "white", filter: "drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.25))", width: "366px", height: "374px" }}>
-                            <StarRating />
-                            <p style={{ fontSize: "18px", width: "291px", height: "154px" }}>Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
-                            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                <Image src="/Ellipse3.jpg" height={56} width={56} alt="" />
-                                <p>Eleanor Pena</p>
-                            </div>
-                        </div>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "20px", backgroundColor: "white", filter: "drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.25))", width: "366px", height: "374px", padding: "20px 20px 20px 20px" }}>
-                            <StarRating />
-                            <p style={{ fontSize: "18px", width: "291px", height: "154px" }}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                <Image src="/Ellipse4.jpg" height={56} width={56} alt="" />
-                                <p>Amy Klassen</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    gap: "10px",
+                  }}
+                >
+                  <Image src="/Ellipse.jpg" height={56} width={56} alt="" />
+                  <p>Amy Klassen</p>
                 </div>
-            </div>
-        </div >
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  backgroundColor: "white",
+                  padding: "40px",
+                  filter: "drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.25))",
+                  width: "286px",
+                  height: "294px",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "20px",
+                  }}
+                >
+                  <StarRating count={4} />
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      width: "291px",
+                      height: "154px",
+                    }}
+                  >
+                    Give everyone you work with—inside and outside your emoji,
+                    keep conversations focused in channels, and simplify all
+                    your communication into one place.
+                  </p>
+                </div>
 
-    );
-}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                  }}
+                >
+                  <Image src="/Ellipse.jpg" height={56} width={56} alt="" />
+                  <p>Amy Klassen</p>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  backgroundColor: "white",
+                  padding: "40px",
+                  filter: "drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.25))",
+                  width: "286px",
+                  height: "294px",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "20px",
+                  }}
+                >
+                  <StarRating count={4} />
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      width: "291px",
+                      height: "154px",
+                    }}
+                  >
+                    Give everyone you work with—inside and outside your emoji,
+                    keep conversations focused in channels, and simplify all
+                    your communication into one place.
+                  </p>
+                </div>
+
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                  }}
+                >
+                  <Image src="/Ellipse.jpg" height={56} width={56} alt="" />
+                  <p>Amy Klassen</p>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  backgroundColor: "white",
+                  padding: "40px",
+                  filter: "drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.25))",
+                  width: "286px",
+                  height: "294px",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "20px",
+                  }}
+                >
+                  <StarRating count={4} />
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      width: "291px",
+                      height: "154px",
+                    }}
+                  >
+                    Give everyone you work with—inside and outside your emoji,
+                    keep conversations focused in channels, and simplify all
+                    your communication into one place.
+                  </p>
+                </div>
+
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                  }}
+                >
+                  <Image src="/Ellipse.jpg" height={56} width={56} alt="" />
+                  <p>Amy Klassen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

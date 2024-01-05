@@ -1,4 +1,4 @@
-import { Button } from "../components/Button";
+import { Button } from "../components/button";
 import { NavigationBar } from "../components/navigation-bar";
 import BackgroundImage from "../../public/brooke.png";
 import { Input } from "../components/input";
