@@ -1,7 +1,4 @@
 import Image from "next/image";
-import { Star } from "../components/star";
-import { FaStar } from 'react-icons/fa';
-import { Apps } from "@mui/icons-material";
 import { StarRating } from "./star";
 
 
